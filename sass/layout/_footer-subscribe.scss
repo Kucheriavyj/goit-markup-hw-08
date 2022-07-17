@@ -1,0 +1,92 @@
+.subscribe {
+    @media screen and (max-width: 767px) {
+        padding: 0;
+        margin: 0;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        text-align: center;
+        padding: 0;
+        margin: 0 auto;
+    }
+    display: block;
+    padding-top: 12px;
+    margin-left: 93px;
+    &__title {
+        @include font (700, 14px, 1.14, 00.03em);
+        display: block;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        color: $btn-focus-color;
+        }
+    &__field {
+        @media screen and (max-width: 767px) {
+            display: block;
+            align-items: center;
+            text-align: center;
+            margin: 0 auto;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            display: block;
+            align-items: center;
+            text-align: center;
+            margin: 0 auto;
+        }
+        position: relative;
+        display: flex;
+        }
+    &__input {
+        @media screen and (max-width: 767px) {
+            display: block;
+            margin-bottom: 20px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            display: block;
+            margin-bottom: 20px;
+            width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        display: flex;
+        padding: 15px 16px;
+        width: 358px;
+        height: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        color: $btn-focus-color;
+        background-color: #2F303A;
+        }
+    &__label {
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            left: 167px;
+        }
+        @include font (400, 16px, 1.25, 00.03em);
+        position: absolute;
+        top: 15px;
+        left: 16px;
+        display: flex;
+        align-items: center;
+        color: rgba(255, 255, 255, 0.6);
+        transition: transform 550ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+}
+
+.subscribe__btn::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: block;
+    margin-left: 10px;
+    background-image: url(../images/icon.svg/telegram.svg);
+}
+
+.subscribe__input:focus + .subscribe__label,
+.subscribe__input:not(:placeholder-shown)+.subscribe__label {
+    @media screen and (max-width: 767px) {
+    transform:translateY(-54px) ;
+    }
+    transform: translateX(-80px);
+}

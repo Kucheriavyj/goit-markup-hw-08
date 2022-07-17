@@ -1,0 +1,68 @@
+.nav-box {
+    display: flex;
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: $btn-focus-color;
+    border-bottom-width: 1600px;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav__logo {
+    margin-right: 93px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+
+    &__link {
+        @include font (500, 14px, 1.14, 00.02em);
+        position: relative;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        color: $headerColor;
+        }
+}
+
+.logo {
+    @include font (700, 26px, 1.19, 00.03em);
+    font-family: 'Raleway';
+    font-style: normal;
+    text-decoration: none;
+    color: #2196F3;
+}
+
+.header__logo-accent {
+    color: $headerColor;
+    text-decoration: none;
+}
+.menu__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.active-page::after {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    background: #2196F3;
+}
+.btn-heder {
+    margin-left: auto;
+}

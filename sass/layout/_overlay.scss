@@ -1,0 +1,29 @@
+.gallery__item:hover .gallery__overlay {
+    transform: translateY(0);
+}
+
+.gallery__link:focus .gallery__overlay {
+    transform: translateY(0);
+}
+
+.gallery__wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery__overlay {
+    @include font (400, 18px, 1.56, 00.03em);
+    position: absolute;
+    top: 0;
+    padding: 63px 24px;
+
+    @media screen and (min-width: 768px) {
+        padding: 43px 21px;
+}
+
+    height: 100%;
+    color: $btn-focus-color;
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(101%);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,57 @@
+.socials {
+    @media screen and (max-width: 767px) {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 60px;
+        padding: 0;
+        }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    padding-top: 12px;
+    &__list {
+        display: flex;
+        justify-content: start;
+        }
+    &__title {
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+        }
+        @include font (700, 14px, 1.14, 00.03em);
+        display: flex;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        }
+    &__svg {
+        fill: #FFFFFF;
+        }
+    &__item {
+        width: 44px;
+        height: 44px;
+        }
+}
+.socials__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: $btn-hover-color;
+        outline: none;
+    }
+}
+
+.socials__item:not(:last-child) {
+    margin-right: $typicalMargin;
+}

@@ -1,0 +1,79 @@
+.feature {
+    @media screen and (max-width: 1199px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+    
+    }
+    &__list {
+        @media screen and (min-width: 480px) {
+            text-align: center;
+        }
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap:30px;
+        }
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            justify-content: center;
+        }
+        }
+    &__item {
+        @media screen and (max-width: 767px) {
+            margin-bottom: 30px;
+        }
+        @media screen and (min-width: 768px) {
+            width: 354px;
+        }
+        @media screen and (min-width: 1200px) {
+            width: 270px;
+        }
+        }
+    &__title {
+        @media screen and (min-width: 480px) {
+            text-align: left;
+        }
+        @include font (700, 14px, 1.14, 00.03em);
+            margin-bottom: $typicalMargin;
+            text-transform: uppercase;
+            color: #212121;
+        }
+    &__text {
+        @media screen and (min-width: 480px) {
+            text-align: left;
+        }
+        @include font (400, 14px, 1.71, 00.03em);
+            color: #757575;
+        }
+}
+
+.feature__item::before {
+    display: block;
+    content: "";
+    margin-bottom: 30px;
+    height: 120px;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #F5F4FA;
+}
+
+.feature__item:nth-child(1)::before {
+    background-image: url(../images/icon.svg/radar.svg);
+}
+
+.feature__item:nth-child(2)::before {
+    background-image: url(../images/icon.svg/time.svg);
+}
+
+.feature__item:nth-child(3)::before {
+    background-image: url(../images/icon.svg/diagram.svg);
+}
+
+.feature__item:nth-child(4)::before {
+    background-image: url(../images/icon.svg/astronaut.svg);
+}
