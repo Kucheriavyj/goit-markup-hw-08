@@ -27,7 +27,7 @@
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
-    @media screen /* and (min-width: 320px) */ and (max-width: 479px) {
+    @media screen and (max-width: 479px) {
         margin: 0 auto;
         margin-bottom: 25px;
         max-width: 273px;
